@@ -1,0 +1,54 @@
+@import "../../../colors.scss";
+
+.footer {
+  padding: 30px;
+  padding-top: 60px;
+  text-align: center;
+  .duck {
+    color: darkgoldenrod;
+    margin: 0 auto;
+    text-align: initial;
+    width: 125px;
+    line-height: 15.5px;
+    font-size: 15px;
+
+    t {
+      color: $bs-info;
+    }
+
+    .egg-container {
+      position: relative;
+      display: inline-block;
+      .egg {
+        &:hover ~ span {
+          visibility: visible;
+        }
+      }
+      .eggtext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -30px;
+        margin-bottom: 5px;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 25%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: black transparent transparent transparent;
+        }
+      }
+    }
+  }
+}
